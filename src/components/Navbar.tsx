@@ -15,7 +15,6 @@ const Navbar: React.FC = () => {
     { title: 'Judges', href: '#judges' },
     { title: 'Team', href: '#team' },
     { title: 'FAQ', href: '#faq' },
-    { title: 'Sponsors', href: '#sponsors' },
   ];
 
   useEffect(() => {

@@ -6,7 +6,6 @@ import About from '@/components/About';
 import Timeline from '@/components/Timeline';
 import Tracks from '@/components/Tracks';
 import Judges from '@/components/Judges';
-import Sponsors from '@/components/Sponsors';
 import FAQ from '@/components/FAQ';
 import Team from '@/components/Team';
 import FloatingElements from '@/components/FloatingElements';
@@ -84,9 +83,6 @@ const Index = () => {
           <Judges />
         </div>
         <div className="reveal-section">
-          <Sponsors />
-        </div>
-        <div className="reveal-section">
           <Team />
         </div>
         <div className="reveal-section">
@@ -109,7 +105,7 @@ const Index = () => {
                 <li><a href="#judges" className="text-white/70 hover:text-white transition-colors">Judges</a></li>
                 <li><a href="#team" className="text-white/70 hover:text-white transition-colors">Team</a></li>
                 <li><a href="#faq" className="text-white/70 hover:text-white transition-colors">FAQ</a></li>
-                <li><a href="#sponsors" className="text-white/70 hover:text-white transition-colors">Sponsors</a></li>
+                
               </ul>
             </div>
             <div>

@@ -15,46 +15,18 @@ const Tracks: React.FC = () => {
   
   const tracks: Track[] = [
     {
-      title: "AI & Machine Learning",
-      description: "Create innovative applications using artificial intelligence and machine learning algorithms to solve real-world problems.",
-      icon: "🤖",
+      title: "Software",
+      description: "Build innovative software solutions, apps, or platforms. Tackle challenges in web, mobile, cloud, or any area of software engineering.",
+      icon: "💻",
       color: "bg-hackathon-blue",
-      prizes: ["$2,000 Cash Prize", "AI Computing Credits", "Mentorship Opportunity"]
+      prizes: ["Cash Prizes", "Developer Swag", "Mentorship Opportunities"]
     },
     {
-      title: "Web3 & Blockchain",
-      description: "Build decentralized applications, smart contracts, or blockchain-based solutions that demonstrate the potential of Web3 technologies.",
-      icon: "⛓️",
+      title: "Hardware",
+      description: "Design and prototype hardware projects, IoT devices, robotics, or electronics. Bring your ideas to life with hands-on engineering.",
+      icon: "�️",
       color: "bg-hackathon-pink",
-      prizes: ["$1,800 Cash Prize", "Blockchain Developer Kit", "Incubator Interview"]
-    },
-    {
-      title: "Health & Wellness",
-      description: "Develop solutions that address health challenges, improve wellness, or make healthcare more accessible and efficient for everyone.",
-      icon: "💊",
-      color: "bg-hackathon-cyan",
-      prizes: ["$1,500 Cash Prize", "Health Tech Conference Tickets", "Pilot Program Opportunity"]
-    },
-    {
-      title: "Sustainability",
-      description: "Create projects that tackle environmental challenges, promote sustainable practices, or help communities adapt to climate change.",
-      icon: "🌱",
-      color: "bg-hackathon-yellow",
-      prizes: ["$1,500 Cash Prize", "Sustainable Tech Grant", "Partnership Opportunity"]
-    },
-    {
-      title: "Education",
-      description: "Build tools that enhance learning experiences, make education more accessible, or help educators deliver content more effectively.",
-      icon: "📚",
-      color: "bg-hackathon-orange",
-      prizes: ["$1,200 Cash Prize", "EdTech Summit Passes", "Pilot with School Districts"]
-    },
-    {
-      title: "Open Innovation",
-      description: "Don't see a track that fits your idea? This category is for all the creative solutions that don't fit neatly into the other tracks.",
-      icon: "💡",
-      color: "bg-hackathon-blue",
-      prizes: ["$1,000 Cash Prize", "Innovation Lab Tour", "Investor Pitch Session"]
+      prizes: ["Cash Prizes", "Hardware Kits", "Industry Networking"]
     }
   ];
 
@@ -74,11 +46,12 @@ const Tracks: React.FC = () => {
             <span className="block text-hackathon-pink wavy-underline">Exciting Tracks</span>
           </h2>
           <p className="text-slate-600 text-lg">
-            Choose from one of our themed tracks to focus your project. Each track comes with specific challenges, resources, and prize opportunities.
+            Choose from one of our themed tracks to focus your project. Each track comes with specific challenges, resources, and prize opportunities.<br />
+            <span className="font-bold text-hackathon-blue">Our tracks are not AI & ML. Our tracks are two: Software and Hardware.</span>
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-center mx-auto w-full max-w-2xl">
           {tracks.map((track, index) => (
             <div 
               key={index}

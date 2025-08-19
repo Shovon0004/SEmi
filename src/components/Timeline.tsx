@@ -118,7 +118,7 @@ const Timeline: React.FC = () => {
             <span className="block text-hackathon-blue">Timeline</span>
             <span className="block text-hackathon-pink wavy-underline">48 Hours of Innovation</span>
           </h2>
-          <p className="text-slate-600 text-lg">
+          <p className="text-yellow-400 text-lg">
             Here's what to expect during our action-packed SemiColon hackathon weekend. Scroll through the timeline and click on events for more details.
           </p>
         </div>

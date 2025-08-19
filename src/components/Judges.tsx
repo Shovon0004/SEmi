@@ -66,7 +66,7 @@ const Judges: React.FC = () => {
             <span className="block text-hackathon-blue">Our Distinguished</span>
             <span className="block text-hackathon-pink wavy-underline">Judges & Mentors</span>
           </h2>
-          <p className="text-slate-600 text-lg">
+          <p className="text-yellow-400 text-lg">
             Hover over the cards to learn more about our expert judges and mentors who will be evaluating your projects and providing guidance.
           </p>
         </div>
