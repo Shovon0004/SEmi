@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -103,7 +101,11 @@
 
   body {
     @apply bg-white text-foreground font-sans overflow-x-hidden;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Press Start 2P', cursive !important;
+  }
+
+  * {
+    font-family: 'Press Start 2P', cursive !important;
   }
 
   h1, h2, h3 {
@@ -177,11 +179,12 @@
   display: none;
 }
 
-/* Background mesh gradient */
-.mesh-gradient {
-  background-color: #FFD100;
-  background-image: radial-gradient(at 30% 20%, rgba(255, 91, 101, 0.3) 0px, transparent 50%),
-                    radial-gradient(at 80% 80%, rgba(94, 205, 227, 0.3) 0px, transparent 50%);
+
+/* Home page background image */
+.home-bg {
+  min-height: 100vh;
+  background: url('./assets/bg.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* Animations for content revealing */
