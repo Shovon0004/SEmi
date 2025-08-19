@@ -108,17 +108,17 @@ const Timeline: React.FC = () => {
   ];
 
   return (
-    <section id="timeline" className="py-20 bg-hackathon-lightblue/30">
+  <section id="timeline" className="py-16 md:py-20 bg-hackathon-lightblue/30">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-3 py-1 rounded-full bg-hackathon-cyan/20 text-hackathon-blue font-medium text-sm mb-4">
             Event Schedule
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
             <span className="block text-hackathon-blue">Timeline</span>
             <span className="block text-hackathon-pink wavy-underline">48 Hours of Innovation</span>
           </h2>
-          <p className="text-yellow-400 text-lg">
+          <p className="text-yellow-400 text-base md:text-lg">
             Here's what to expect during our action-packed SemiColon hackathon weekend. Scroll through the timeline and click on events for more details.
           </p>
         </div>
@@ -198,7 +198,7 @@ const Timeline: React.FC = () => {
           </div>
           
           {/* Scroll indicators - Fixed these to properly scroll left/right */}
-          <div className="flex justify-between w-full absolute top-1/2 -translate-y-1/2 pointer-events-none">
+          <div className="hidden sm:flex justify-between w-full absolute top-1/2 -translate-y-1/2 pointer-events-none">
             <button 
               className={cn(
                 "pointer-events-auto ml-2 flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg text-hackathon-blue transition-all duration-200",

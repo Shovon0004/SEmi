@@ -12,12 +12,19 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			// Use smaller padding on very small screens for better fit
+			padding: {
+				DEFAULT: '2rem',
+				sx: '1rem'
+			},
 			screens: {
 				'2xl': '1400px'
 			}
 		},
 		extend: {
+			screens: {
+				'xs': '400px'
+			},
 			fontFamily: {
 				sans: ['Orbitron', 'sans-serif'],
 				display: ['Orbitron', 'sans-serif'],

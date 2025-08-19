@@ -48,27 +48,27 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen pt-20 overflow-hidden mesh-gradient flex items-center">
-      <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div className="space-y-8 max-w-xl">
+    <section className="relative min-h-screen pt-24 sm:pt-28 overflow-hidden mesh-gradient flex items-center">
+      <div className="container mx-auto px-4 py-16 md:py-28 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="space-y-8 max-w-xl order-2 lg:order-1">
             <div className="space-y-2">
               <div className="inline-block animate-bounce-gentle">
                 <span className="bg-white/90 text-hackathon-pink px-4 py-1 rounded-full text-sm font-medium">
                   Coming Soon
                 </span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
 <span className="text-hackathon-blue">
     SemiColon <span className="text-hackathon-black">;</span>
   </span>                <span className="block text-hackathon-pink wavy-underline">Hackathon</span>
               </h1>
-              <p className="text-slate-700 text-lg md:text-xl mt-4">
+              <p className="text-slate-700 text-base md:text-lg lg:text-xl mt-4 leading-relaxed">
                 Join us for an exciting 36-hour journey of innovation, creativity, and collaboration. Build something amazing with fellow developers!
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 sm:items-stretch">
               <Link to="/register" className="sm:flex-1">
                 <PikachuButtonWrapper>
                   <button>
@@ -97,7 +97,7 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-4 gap-2 sm:gap-4">
+            <div className="grid grid-cols-4 gap-2 sm:gap-4" aria-label="Countdown to hackathon start">
               {Object.entries(timeLeft).map(([label, value]) => (
                 <div key={label} className="glass-card p-2 sm:p-4 rounded-xl text-center hover:transform hover:scale-105 transition-transform duration-300">
                   <div className="text-xl sm:text-3xl font-bold text-hackathon-blue mb-1">
@@ -111,7 +111,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="relative h-[300px] md:h-[500px]">
+          <div className="relative h-[260px] xs:h-[300px] md:h-[480px] lg:h-[520px] w-full order-1 lg:order-2">
             {/* Lottie Animation replacing the SVG */}
             <LottieWrapper className="absolute inset-0 flex items-center justify-center">
               <Lottie 
@@ -145,7 +145,7 @@ const Hero = () => {
         </div>
         
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-hackathon-blue">
+  <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-hackathon-blue" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>

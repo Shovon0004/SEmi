@@ -55,15 +55,17 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 sm:py-4 safe-pt',
         scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
       )}
+      role="navigation"
+      aria-label="Main navigation"
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-3 xs:px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <div className="relative">
-              <span className="text-2xl font-bold bg-gradient-to-r from-hackathon-blue to-hackathon-pink bg-clip-text text-transparent">
+              <span className="text-xl xs:text-2xl font-bold bg-gradient-to-r from-hackathon-blue to-hackathon-pink bg-clip-text text-transparent">
                 SemiColon ;
               </span>
               <div className="absolute -top-1 -right-3 w-5 h-5 rounded-full bg-hackathon-yellow flex items-center justify-center text-xs font-bold text-hackathon-blue">
@@ -73,13 +75,13 @@ const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+      <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-slate-700 hover:text-hackathon-pink transition-colors relative group font-medium"
+        className="text-slate-700 hover:text-hackathon-pink transition-colors relative group font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-hackathon-pink/50 rounded"
               >
                 {item.title}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-hackathon-pink transition-all duration-300 group-hover:w-full" />
@@ -98,8 +100,9 @@ const Navbar: React.FC = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-full bg-hackathon-lightblue text-hackathon-blue"
-            aria-label="Toggle mobile menu"
+            className="md:hidden p-2.5 rounded-md bg-white/70 backdrop-blur text-hackathon-blue shadow-sm border border-white/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-hackathon-pink/50"
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileMenuOpen}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -130,16 +133,16 @@ const Navbar: React.FC = () => {
       {/* Mobile menu */}
       <div
         className={cn(
-          'absolute top-full left-0 right-0 bg-white shadow-lg md:hidden transition-all duration-300 overflow-hidden',
-          mobileMenuOpen ? 'max-h-screen' : 'max-h-0'
+          'absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg md:hidden transition-[max-height,opacity] duration-300 overflow-hidden border-b border-slate-200',
+          mobileMenuOpen ? 'max-h-[70vh] opacity-100' : 'max-h-0 opacity-0'
         )}
       >
-        <div className="container mx-auto px-4 py-4 space-y-4">
+        <div className="container mx-auto px-4 py-4 space-y-4 overflow-y-auto no-scrollbar">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="block py-2 text-slate-700 hover:text-hackathon-pink transition-colors"
+              className="block py-2 text-slate-700 hover:text-hackathon-pink transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-hackathon-pink/50 rounded"
               onClick={(e) => {
                 handleNavClick(e, item.href);
                 setMobileMenuOpen(false);

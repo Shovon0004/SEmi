@@ -32,22 +32,22 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-20 relative overflow-hidden bg-white">
+  <section id="about" className="py-16 md:py-20 relative overflow-hidden bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-3 py-1 rounded-full bg-hackathon-lightblue text-hackathon-blue font-medium text-sm mb-4">
             About SemiColon ;
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
             What makes our hackathon
             <span className="block text-hackathon-pink wavy-underline">Extraordinary</span>
           </h2>
-          <p className="text-slate-600 text-lg">
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed">
             Hover over the cards below to discover what makes HackX a unique and exciting hackathon experience that you won't want to miss!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 mb-12 md:mb-16">
           {cards.map((card, index) => (
             <StyledCard key={index} color={card.color}>
               <div className="content-box">
@@ -65,7 +65,11 @@ const About: React.FC = () => {
 
 const StyledCard = styled.div<{ color: string }>`
   width: 100%;
-  min-height: 280px;
+  min-height: 260px;
+  @media (max-width: 640px) {
+    min-height: 220px;
+    padding: 16px;
+  }
   background: ${({ color }) => color};
   border-radius: 12px;
   box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
@@ -100,11 +104,17 @@ const StyledCard = styled.div<{ color: string }>`
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 10px;
+    @media (max-width: 640px) {
+      font-size: 18px;
+    }
   }
 
   .description {
     font-size: 14px;
     opacity: 0.9;
+    @media (max-width: 640px) {
+      font-size: 12px;
+    }
   }
 `;
 

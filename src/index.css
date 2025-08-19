@@ -183,8 +183,16 @@
 /* Home page background image */
 .home-bg {
   min-height: 100vh;
-  background: url('./assets/bg.png') no-repeat center center fixed;
-  background-size: cover;
+  background: url('./assets/bg.png') no-repeat center center / cover;
+  /* Mobile Safari issues with fixed backgrounds */
+  background-attachment: fixed;
+}
+
+@media (max-width: 640px) {
+  .home-bg {
+    /* Disable fixed attachment on small screens to prevent jank */
+    background-attachment: scroll;
+  }
 }
 
 /* Animations for content revealing */
@@ -242,6 +250,19 @@
   background-size: 20px 4px;
   animation: wave 2s linear infinite;
 }
+
+/* Text clamping helpers */
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* Safe area padding for devices with notches */
+.safe-px { padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
+.safe-pt { padding-top: max(1rem, env(safe-area-inset-top)); }
+.safe-pb { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+
+/* Utility to hide scrollbars while keeping scroll */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* For the floating elements animation */
 @keyframes floating {

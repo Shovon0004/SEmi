@@ -85,20 +85,20 @@ const Register = () => {
   );
 
   return (
-    <div className="relative min-h-screen mesh-gradient overflow-hidden pt-20">
+  <div className="relative min-h-screen mesh-gradient overflow-hidden pt-24 sm:pt-28">
       <FloatingElements className="opacity-70" />
       
-      <div className="container mx-auto px-4 py-12 relative z-10">
+      <div className="container mx-auto px-4 py-10 md:py-12 relative z-10">
         <div className="max-w-2xl mx-auto">
           {/* Header with cute elements */}
-          <div className="text-center mb-12 relative">
-            <h1 className="text-5xl font-bold text-hackathon-blue mb-3 tracking-tight relative inline-block">
+          <div className="text-center mb-10 md:mb-12 relative">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-hackathon-blue mb-3 tracking-tight relative inline-block leading-tight">
               Join the <span className="text-hackathon-pink wavy-underline">Adventure</span>
               <span className="absolute -top-4 -right-8">
                 <Star className="w-8 h-8 text-hackathon-yellow animate-pulse-glow" />
               </span>
             </h1>
-            <p className="text-lg text-gray-700 mb-6 max-w-lg mx-auto">
+            <p className="text-base md:text-lg text-gray-700 mb-6 max-w-lg mx-auto leading-relaxed">
               Ready to code, create, and collaborate? Register now to secure your spot in our hackathon!
             </p>
             
@@ -111,7 +111,7 @@ const Register = () => {
           </div>
           
           {/* Registration form with bouncy card effect */}
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-[1.01] transition-all duration-500 perspective-1000 relative">
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-[1.01] transition-all duration-500 perspective-1000 relative border border-hackathon-lightblue/40">
             {/* Moving dots background for card */}
             <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
               {Array.from({ length: 20 }).map((_, i) => (
@@ -129,7 +129,7 @@ const Register = () => {
               ))}
             </div>
             
-            <div className="p-8 relative">
+            <div className="p-6 md:p-8 relative">
               <FormStepIndicator />
               
               <div className="overflow-hidden">
@@ -139,7 +139,7 @@ const Register = () => {
                     formStep === 0 ? 'translate-x-0 opacity-100' : 'translate-x-[-100%] absolute opacity-0'
                   }`}
                 >
-                  <h2 className="text-2xl font-bold text-hackathon-blue mb-6 flex items-center">
+                  <h2 className="text-xl md:text-2xl font-bold text-hackathon-blue mb-6 flex items-center">
                     <User className="mr-2 text-hackathon-pink" />
                     Personal Information
                   </h2>
@@ -193,7 +193,7 @@ const Register = () => {
                     formStep === 1 ? 'translate-x-0 opacity-100' : formStep < 1 ? 'translate-x-[100%] absolute opacity-0' : 'translate-x-[-100%] absolute opacity-0'
                   }`}
                 >
-                  <h2 className="text-2xl font-bold text-hackathon-blue mb-6 flex items-center">
+                  <h2 className="text-xl md:text-2xl font-bold text-hackathon-blue mb-6 flex items-center">
                     <Users className="mr-2 text-hackathon-pink" />
                     Team Information
                   </h2>
@@ -240,7 +240,7 @@ const Register = () => {
                     formStep === 2 ? 'translate-x-0 opacity-100' : 'translate-x-[100%] absolute opacity-0'
                   }`}
                 >
-                  <h2 className="text-2xl font-bold text-hackathon-blue mb-6 flex items-center">
+                  <h2 className="text-xl md:text-2xl font-bold text-hackathon-blue mb-6 flex items-center">
                     <Code className="mr-2 text-hackathon-pink" />
                     Hackathon Details
                   </h2>
@@ -285,7 +285,7 @@ const Register = () => {
               </div>
               
               {/* Navigation buttons with cute animations */}
-              <div className="mt-8 flex justify-between items-center">
+              <div className="mt-8 flex justify-between items-center gap-4">
                 {formStep > 0 ? (
                   <AnimatedButton
                     variant="outline"
@@ -302,7 +302,7 @@ const Register = () => {
                   variant="primary"
                   onClick={handleNextStep}
                   withConfetti={formStep === 2}
-                  className="px-8"
+                  className="px-6 md:px-8"
                 >
                   {formStep < 2 ? 'Continue' : 'Register'}
                   {formStep < 2 && (
@@ -317,7 +317,7 @@ const Register = () => {
           </div>
           
           {/* Cute elements at bottom of page */}
-          <div className="text-center mt-8 opacity-70 text-sm">
+          <div className="text-center mt-8 opacity-70 text-xs md:text-sm">
             <div className="flex justify-center items-center space-x-2">
               <div className="w-2 h-2 rounded-full bg-hackathon-pink"></div>
               <div className="w-2 h-2 rounded-full bg-hackathon-cyan"></div>

@@ -56,22 +56,22 @@ const Judges: React.FC = () => {
   ];
 
   return (
-    <section id="judges" className="py-20 bg-hackathon-lightblue/30 relative overflow-hidden">
+  <section id="judges" className="py-16 md:py-20 bg-hackathon-lightblue/30 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-3 py-1 rounded-full bg-hackathon-pink/20 text-hackathon-blue font-medium text-sm mb-4">
             Meet The Experts
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
             <span className="block text-hackathon-blue">Our Distinguished</span>
             <span className="block text-hackathon-pink wavy-underline">Judges & Mentors</span>
           </h2>
-          <p className="text-yellow-400 text-lg">
+          <p className="text-yellow-400 text-base md:text-lg">
             Hover over the cards to learn more about our expert judges and mentors who will be evaluating your projects and providing guidance.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {judges.map((judge, index) => (
             <FlipCard key={index}>
               <div className="flip-card-inner">

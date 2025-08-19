@@ -65,7 +65,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen home-bg">
+  <div className="relative min-h-screen home-bg">
       <FloatingElements />
       <Navbar />
       <main>
@@ -89,16 +89,16 @@ const Index = () => {
           <FAQ />
         </div>
       </main>
-      <footer className="bg-hackathon-blue text-white py-8">
+      <footer className="bg-hackathon-blue text-white py-10 mt-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">SemiColon</h3>
-              <p className="text-white/70">A 36-hour hackathon experience designed to inspire innovation and collaboration.</p>
+              <h3 className="text-lg md:text-xl font-bold mb-4">SemiColon</h3>
+              <p className="text-white/70 text-sm md:text-base leading-relaxed">A 36-hour hackathon experience designed to inspire innovation and collaboration.</p>
             </div>
             <div>
               <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 text-sm md:text-base">
                 <li><a href="#about" className="text-white/70 hover:text-white transition-colors">About</a></li>
                 <li><a href="#timeline" className="text-white/70 hover:text-white transition-colors">Timeline</a></li>
                 <li><a href="#tracks" className="text-white/70 hover:text-white transition-colors">Tracks</a></li>
@@ -110,7 +110,7 @@ const Index = () => {
             </div>
             <div>
               <h3 className="text-lg font-bold mb-4">Contact</h3>
-              <p className="text-white/70 mb-2">Email: info@semicolon.dev</p>
+              <p className="text-white/70 mb-2 text-sm md:text-base">Email: info@semicolon.dev</p>
               <div className="flex space-x-4">
                 <a href="#" className="text-white/70 hover:text-white transition-colors interactive-button">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -130,8 +130,8 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-white/50">
-            © 2023 SemiColon. All rights reserved.
+          <div className="border-t border-white/10 mt-8 pt-8 text-center text-xs md:text-sm text-white/50">
+            © 2025 SemiColon. All rights reserved.
           </div>
         </div>
       </footer>

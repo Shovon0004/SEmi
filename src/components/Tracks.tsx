@@ -35,23 +35,23 @@ const Tracks: React.FC = () => {
   };
 
   return (
-    <section id="tracks" className="py-20 bg-white relative overflow-hidden">
+  <section id="tracks" className="py-16 md:py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-3 py-1 rounded-full bg-hackathon-yellow/20 text-hackathon-blue font-medium text-sm mb-4">
             Challenge Tracks
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
             <span className="block text-hackathon-blue">Hack on these</span>
             <span className="block text-hackathon-pink wavy-underline">Exciting Tracks</span>
           </h2>
-          <p className="text-slate-600 text-lg">
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed">
             Choose from one of our themed tracks to focus your project. Each track comes with specific challenges, resources, and prize opportunities.<br />
             <span className="font-bold text-hackathon-blue">Our tracks are not AI & ML. Our tracks are two: Software and Hardware.</span>
           </p>
         </div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-center mx-auto w-full max-w-2xl">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-stretch mx-auto w-full max-w-3xl">
           {tracks.map((track, index) => (
             <div 
               key={index}
@@ -66,7 +66,7 @@ const Tracks: React.FC = () => {
                 "h-2 w-full",
                 track.color
               )}></div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col h-full">
                 <div className="flex items-center mb-4">
                   <div className={cn(
                     "w-12 h-12 rounded-full flex items-center justify-center text-2xl mr-4",
@@ -80,7 +80,7 @@ const Tracks: React.FC = () => {
                 <p className="text-slate-600 mb-4">{track.description}</p>
                 
                 <div className={cn(
-                  "overflow-hidden transition-all duration-300",
+                  "overflow-hidden transition-all duration-300 grow",
                   expandedTrack === index ? "max-h-96 opacity-100 pt-4" : "max-h-0 opacity-0"
                 )}>
                   <div className="border-t border-gray-100 pt-4">
